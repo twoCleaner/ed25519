@@ -1423,33 +1423,33 @@ void fe_tobytes(unsigned char *s, const fe h) {
     /* Goal: Output h-2^255 q, which is between 0 and 2^255-20. */
     carry0 = h0 >> 26;
     h1 += carry0;
-    h0 -= (int64_t)((uint64_t)carry0 << 26);
+    h0 -= (int32_t)((uint32_t)carry0 << 26);
     carry1 = h1 >> 25;
     h2 += carry1;
-    h1 -= (int64_t)((uint64_t)carry1 << 25);
+    h1 -= (int32_t)((uint32_t)carry1 << 25);
     carry2 = h2 >> 26;
     h3 += carry2;
-    h2 -= (int64_t)((uint64_t)carry2 << 26);
+    h2 -= (int32_t)((uint32_t)carry2 << 26);
     carry3 = h3 >> 25;
     h4 += carry3;
-    h3 -= (int64_t)((uint64_t)carry3 << 25);
+    h3 -= (int32_t)((uint32_t)carry3 << 25);
     carry4 = h4 >> 26;
     h5 += carry4;
-    h4 -= (int64_t)((uint64_t)carry4 << 26);
+    h4 -= (int32_t)((uint32_t)carry4 << 26);
     carry5 = h5 >> 25;
     h6 += carry5;
-    h5 -= (int64_t)((uint64_t)carry5 << 25);
+    h5 -= (int32_t)((uint32_t)carry5 << 25);
     carry6 = h6 >> 26;
     h7 += carry6;
-    h6 -= (int64_t)((uint64_t)carry6 << 26);
+    h6 -= (int32_t)((uint32_t)carry6 << 26);
     carry7 = h7 >> 25;
     h8 += carry7;
-    h7 -= (int64_t)((uint64_t)carry7 << 25);
+    h7 -= (int32_t)((uint32_t)carry7 << 25);
     carry8 = h8 >> 26;
     h9 += carry8;
-    h8 -= (int64_t)((uint64_t)carry8 << 26);
+    h8 -= (int32_t)((uint32_t)carry8 << 26);
     carry9 = h9 >> 25;
-    h9 -= (int64_t)((uint64_t)carry9 << 25);
+    h9 -= (int32_t)((uint32_t)carry9 << 25);
 
     /* h10 = carry9 */
     /*
